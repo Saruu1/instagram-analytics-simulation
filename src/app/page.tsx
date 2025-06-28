@@ -7,7 +7,7 @@ import { AnalyticsData } from "@components/type";
 import { useEffect, useState } from "react";
 
 async function fetchAnalytics(): Promise<AnalyticsData> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/analytics`, {
+  const res = await fetch(`/api/analytics`, {
     cache: "no-store",
   });
   return res.json();
